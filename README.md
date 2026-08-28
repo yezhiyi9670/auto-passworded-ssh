@@ -3,11 +3,11 @@
 ![Not so secure: Avoid whenever possible](https://img.shields.io/badge/Not%20so%20secure-Avoid%20whenever%20possible-orange?style=flat-square)
 ![Supports Unix-like systems and Windows](https://img.shields.io/badge/Supports-Unix--like%20systems%20and%20Windows-blue?style=flat-square)
 
-This is a simple wrapper of the `ssh` and `scp` commands that enables password and verification code (TOTP) autofill during log-in, so that you do not need to type in your password and verification code every time.
+This is a simple wrapper of the `ssh` and `scp` commands that auto-fills password and verification code (TOTP) during SSH log-in, so that you do not need to type in your password and verification code every time.
 
 > [!WARNING] SECURITY WARNING
 >
-> If you are fed up with typing the passwords, ALWAYS prefer proper passwordless login with [public key authentication](https://www.redhat.com/en/blog/key-based-authentication-ssh) whenever possible.
+> If you are fed up with typing the passwords, ALWAYS avoid this and prefer proper passwordless login with [public key authentication](https://www.redhat.com/en/blog/key-based-authentication-ssh) whenever possible.
 >
 > Auto-filling password and verification code requires storing your password and OTP seed, which is NOT a good security practice. Auto-filling your OTP from the same source as the password also defeats the purpose of the "second-factor" authentication.
 >
