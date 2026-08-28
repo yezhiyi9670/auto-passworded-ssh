@@ -51,6 +51,10 @@ The password auto-responder currently enforces a short and random delay before r
 >
 > The wrapper currently does not check if the permssions are secure, so take care of your own security.
 
+## Use with VSCode Remote-SSH
+
+To make VSCode Remote-SSH benefit from the auto-fill (so VSCode no longer asks for password every time you open a folder or reconnect), you can set the `Remote.SSH: Path` item (`remote.SSH.path`) in your VSCode settings to the absolute path of the `apssh` wrapper executable. Use the `bin/apssh` on \*nix systems and `bin/apssh.cmd` on Windows.
+
 ## Limitations
 
 - Only cleartext passwords and six-digit OTPs are supported.
