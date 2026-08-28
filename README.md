@@ -12,6 +12,8 @@ This is a simple wrapper of the `ssh` and `scp` commands that enables password a
 > Auto-filling password and verification code requires storing your password and OTP seed, which is NOT a good security practice. Auto-filling your OTP from the same source as the password also defeats the purpose of the "second-factor" authentication.
 >
 > This tool is only intended for you if you do not want to type passwords AND the server you have to log into cannot support proper public key authentication at all.
+>
+> Your warranty is now void. USE AT YOUR OWN RISK.
 
 ## Setup
 
@@ -42,6 +44,12 @@ user@hostname:~$
 ```
 
 The password auto-responder currently enforces a short and random delay before responding the password or verification code to avoid potential issues caused by overly fast interaction.
+
+> [!CAUTION]
+>
+> Make sure that you set yourself as the owner of the stored password YAML files and restrict their permissions so that other users will not be able to read them.
+>
+> The wrapper currently does not check if the permssions are secure, so take care of your own security.
 
 ## Limitations
 
