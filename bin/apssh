@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # For direct execution by bash-like environment
 
 APSSH_DIR=$(cd "$(dirname "$0")"/.. && pwd)

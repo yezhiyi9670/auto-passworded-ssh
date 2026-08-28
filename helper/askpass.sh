@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Shim to Python script
 
 APSSH_DIR=$(cd "$(dirname "$0")"/.. && pwd)

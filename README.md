@@ -17,11 +17,11 @@ This is a simple wrapper of the `ssh` and `scp` commands that auto-fills passwor
 
 ## Setup
 
-1. If you are using Windows, make sure you have a working \*nix-style shell `sh.exe` in your PATH since the wrapper is a shell script.
-   - One way is to use Git Bash shipped with Git for Windows. The appropriate binary is the wrapper binary at `$GIT_INSTALL_DIR/bin/sh.exe`, not `$GIT_INSTALL_DIR/usr/bin/sh.exe`.
+1. Ensure presence of Bash or a Bash-like shell (such as a POSIX-compatible-mode Bash).
+   - If you are using Windows, make sure you have a `sh.exe` (that actually launches a Bash-style shell) in your PATH since the wrapper is a Bash-style shell script. One way is to use Git Bash shipped with Git for Windows. The appropriate binary is the wrapper binary at `$GIT_INSTALL_DIR/bin/sh.exe` (which sets proper PATH for Git Bash and actually launches `bash`), not `$GIT_INSTALL_DIR/usr/bin/bash.exe`.
 2. In your system's default Python3 installation (`python3`), install the `ruyaml` and `pyotp` packages.
 3. Clone or download repository to wherever you want.
-4. Add the `bin` folder to your PATH (Use environment variable settings in Windows and bash/profile for *nix).
+4. Add the `bin` folder to your PATH (Use environment variable settings in Windows and bashrc/profile for *nix).
 5. Test installation with command `apssh -V`.
 
 ## Usage
