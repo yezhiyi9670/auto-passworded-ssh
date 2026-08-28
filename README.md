@@ -5,7 +5,7 @@
 
 This is a simple wrapper of the `ssh` and `scp` commands that auto-fills password and verification code (TOTP) during SSH log-in, so that you do not need to type in your password and verification code every time.
 
-> [!WARNING] SECURITY WARNING
+> [!WARNING]
 >
 > If you are fed up with typing the passwords, ALWAYS avoid this and prefer proper passwordless login with [public key authentication](https://www.redhat.com/en/blog/key-based-authentication-ssh) whenever possible.
 >
