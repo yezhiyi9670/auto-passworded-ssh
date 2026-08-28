@@ -1,0 +1,11 @@
+#!/bin/sh
+# For direct execution by bash-like environment
+
+APSSH_DIR=$(cd "$(dirname "$0")"/.. && pwd)
+
+export SSH_ASKPASS="$APSSH_DIR/helper/askpass.sh"
+export SSH_ASKPASS_REQUIRE=force
+export DISPLAY=
+
+ssh "$@"
+exit $?
