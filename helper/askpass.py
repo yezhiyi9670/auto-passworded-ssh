@@ -10,6 +10,8 @@ import ruyaml
 import traceback
 import re
 
+yaml = ruyaml.YAML(typ='rt')
+
 def writelog(text, end='\n'):
     # stderr is displayed on the screen
     sys.stderr.write(text + end)
@@ -44,7 +46,7 @@ def main():
     passwords_data: dict[str, dict[str, str]] = {}
     for passwords_path in passwords_paths:
         try:
-            data: dict[str, dict[str, str]] = ruyaml.load(open(passwords_path, 'r', encoding='utf-8'), Loader=ruyaml.SafeLoader)
+            data: dict[str, dict[str, str]] = yaml.load(open(passwords_path, 'r', encoding='utf-8'))
             if data == None:
                 writelog(f'AutoLogin WARNING: Empty passwords file "{passwords_path}".')
                 continue
